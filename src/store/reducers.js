@@ -15,7 +15,7 @@ export const provider = (state = {}, action) => {
         ...state,
         account: action.account
       } 
-case 'ETHER_BALANCE_LOADED':
+    case 'ETHER_BALANCE_LOADED':
       return {
         ...state,
         balance: action.balance
