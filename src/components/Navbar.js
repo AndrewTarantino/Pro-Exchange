@@ -12,12 +12,12 @@ const Navbar = () => {
   const provider = useSelector(state => state.provider.connection)
   const chainId = useSelector(state => state.provider.chainId)
   const account = useSelector(state => state.provider.account)
-  const balance = useSelector(state => state.provider.account)
+  const balance = useSelector(state => state.provider.balance)
 
   const dispatch = useDispatch()
 
   const connectHandler = async () => {
-    loadAccount(provider, dispatch)
+    await loadAccount(provider, dispatch)
   }
   
   const networkHandler = async (e) => {
