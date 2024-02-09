@@ -22,11 +22,13 @@ const Markets = () => {
         <select name="markets" id="markets" onChange={marketHandler}>
           <option value={`${config[chainId].PRO.address},${config[chainId].mETH.address}`}>PRO / mETH</option>
           <option value={`${config[chainId].PRO.address},${config[chainId].mDAI.address}`}>PRO / mDAI</option>
+          <option value={`${config[chainId].PRO.address},${config[chainId].mDApp.address}`}>PRO / mDApp</option>
         </select>
       ) : (
         <div>
           <p>Not Deployed to Network</p>
         </div>
+      
       )}
 
       <hr />

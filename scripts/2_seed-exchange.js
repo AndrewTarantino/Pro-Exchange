@@ -20,10 +20,13 @@ async function main() {
 
   const mETH = await ethers.getContractAt('Token', config[chainId].mETH.address)
   console.log(`mEth Token fetched: ${mETH.address}\n`)
-
+ 
   const mDAI = await ethers.getContractAt('Token', config[chainId].mDAI.address)
   console.log(`mDAI Token fetched: ${mDAI.address}\n`)
-
+ 
+  const mDApp = await ethers.getContractAt('Token', config[chainId].mDApp.address)
+  console.log(`mDApp Token fetched: ${mDApp.address}\n`)
+ 
   const exchange = await ethers.getContractAt('Exchange', config[chainId].exchange.address)
   console.log(`Exchange fetched: ${exchange.address}\n`)
 

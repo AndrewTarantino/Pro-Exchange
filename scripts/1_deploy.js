@@ -13,15 +13,19 @@ async function main() {
   const pro = await Token.deploy('Protein', 'PRO', '1000000')
   await pro.deployed()
   console.log(`PRO Deployed to: ${pro.address}`)
-
+  
   const mETH = await Token.deploy('mETH', 'mETH', '1000000')
   await mETH.deployed()
   console.log(`mETH Deployed to: ${mETH.address}`)
-
+ 
   const mDAI = await Token.deploy('mDAI', 'mDAI', '1000000')
   await mETH.deployed()
   console.log(`mDAI Deployed to: ${mDAI.address}`)
-
+  
+  const mDApp = await Token.deploy('mDApp', 'mDApp', '1000000')
+  await mDApp.deployed()
+  console.log(`mDApp Deployed to: ${mDApp.address}`)
+  
   const exchange = await Exchange.deploy(accounts[1].address, 10)
   await exchange.deployed()
   console.log(`Exchange Deployed to: ${exchange.address}`)
