@@ -67,7 +67,7 @@ const Order = () => {
             value={amount === 0 ? '' : amount}
             onChange={(e) => setAmount(e.target.value)}
         />
-       
+
         {isBuy ? (
           <label htmlFor="price">Buy Price</label>
         ) : (

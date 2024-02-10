@@ -15,7 +15,7 @@ const OrderBook = () => {
       </div>
 
       <div className="flex">
-        
+
         {!orderBook || orderBook.sellOrders.length === 0 ? (
           <p className='flex-center'>No Sell Orders</p>
         ) : (
@@ -29,7 +29,6 @@ const OrderBook = () => {
               </tr>
             </thead>
             <tbody>
-              
 
               {orderBook && orderBook.sellOrders.map((order, index) => {
                 return(
@@ -38,15 +37,15 @@ const OrderBook = () => {
                   <td style={{ color: `${order.orderTypeClass}` }}>{order.tokenPrice}</td>
                   <td>{order.token1Amount}</td>
                 </tr>                
-                )
-              })}
+                );
+             })}
 
             </tbody>
           </table>
         )}
 
         <div className='divider'></div>
-        
+
         {!orderBook || orderBook.buyOrders.length === 0 ? (
           <p className='flex-center'>No Buy Orders</p>
         ) : (
@@ -56,10 +55,11 @@ const OrderBook = () => {
             <tr>
               <th>{symbols && symbols[0]}<img src={sort} alt="Sort" /></th>
               <th>{symbols && symbols[0]}/{symbols && symbols[1]}<img src={sort} alt="Sort" /></th>
-              <th>{symbols && symbols[1]}<img src={sort} alt="Sort" /></th>            </tr>
+              <th>{symbols && symbols[1]}<img src={sort} alt="Sort" /></th>
+            </tr>
           </thead>
           <tbody>
-              
+
             {orderBook && orderBook.buyOrders.map((order, index) => {
               return(
               <tr key={index}>
@@ -69,7 +69,7 @@ const OrderBook = () => {
               </tr>                
               )
             })}
-          
+
           </tbody>
         </table>
       )}

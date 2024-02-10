@@ -36,7 +36,7 @@ const Navbar = () => {
 
       <div className='exchange__header--networks flex'>
         <img src={eth} alt="ETH logo" className='ETH logo' />
-        
+
       { chainId && (
         <select name="networks" id="networks" value={config[chainId] ? `0x${chainId.toString(16)}` : `0`} onChange={networkHandler}>
           <option value="0" disabled>Select Network</option>
