@@ -210,7 +210,6 @@ export const exchange = (state = DEFAULT_EXCHANGE_STATE, action) => {
         ...state,
         balances: [action.balance]
       }
-
     case 'EXCHANGE_TOKEN_2_BALANCE_LOADED':
       return {
         ...state,

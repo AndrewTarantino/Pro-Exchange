@@ -1,6 +1,8 @@
 import { useEffect, useState, useRef } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
  
+import mdapp from '../assets/dapp.svg';
+import mdai from '../assets/dai.svg';
 import pro from '../assets/pro.svg';
 import meth from '../assets/eth.svg';
 
@@ -72,8 +74,6 @@ const Balance = () => {
       transferTokens(provider, exchange, 'Withdraw', token, token2TransferAmount, dispatch)
       setToken2TransferAmount(0)
     }
-
-    console.log("withdrawing tokens...")
   }
 
   useEffect(() => {
@@ -126,13 +126,21 @@ const Balance = () => {
 
       <div className='exchange__transfers--form'>
         <div className='flex-between'>
-          <p><small>Token</small><br /><img src={meth} alt="Token Logo" />{symbols && symbols[1]}</p>
+          <p>
+            <small>Token</small><br />
+            <img src={
+              symbols && symbols[1] === 'mDApp' ? mdapp : // If mDApp, show mDApp logo
+              symbols && symbols[1] === 'mDAI' ? mdai : // If mDAI, show mDAI logo
+              meth // Default to mETH logo
+            } alt="Token Logo" />
+            {symbols && symbols[1]}
+          </p>
           <p><small>Wallet</small><br />{tokenBalances && tokenBalances[1]}</p>
           <p><small>Exchange</small><br />{exchangeBalances && exchangeBalances[1]}</p>
         </div>
 
         <form onSubmit={isDeposit ? (e) => depositHandler(e, tokens[1]) : (e) => withdrawHandler(e, tokens[1])}>
-          <label htmlFor="token1"></label>
+          <label htmlFor="token1">{symbols && symbols[1]} Amount</label>
           <input
             type="text"
             id='token1'
@@ -146,7 +154,8 @@ const Balance = () => {
                 <span>Deposit</span>
             ) : (
                 <span>Withdraw</span>
-            )}          </button>
+            )}
+          </button>
         </form>
       </div>
 
