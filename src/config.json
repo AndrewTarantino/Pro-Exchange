@@ -8,7 +8,7 @@
     },
     "mETH": {
       "address": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512"    
- },
+    },
     "mDAI": {
       "address": "0x9fE46736679d2D9a65F0992F2272dE9f3c7fa6e0"    
     },
@@ -18,6 +18,21 @@
     "explorerURL": "#"
   },
   "11155111": {
+    "exchange": {
+      "address": "0x7DEcd270C1FECe427f65C2A5a56F301CE06Dae93"
+    },
+    "PRO": {
+      "address": "0x7cb51acb102118EFC6D9F040f23dcD2e1eE6E618" 
+    },
+    "mETH": {
+      "address": "0xCBB79263A522894F9Acf51EC49D518e1cCEAaBc5"    
+    },
+    "mDAI": {
+      "address": "0x7Cdac3F13f153fCfFb4d668e864c9E8A2b6cFeE6"    
+    },
+    "mDApp": {
+      "address": "0xBA79AA7488949F077b8A45F114f2F3373F36345C"
+    },
     "explorerURL": "https://sepolia.etherscan.io"
   }
 }
