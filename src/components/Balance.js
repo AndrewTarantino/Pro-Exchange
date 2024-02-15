@@ -17,7 +17,6 @@ const Balance = () => {
   const [token2TransferAmount, setToken2TransferAmount] = useState(0)
 
   const dispatch = useDispatch()
-
   const provider = useSelector(state => state.provider.connection)
   const account = useSelector(state => state.provider.account)
 

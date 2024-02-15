@@ -1,5 +1,4 @@
 import { useDispatch, useSelector } from 'react-redux';
-
 import sort from '../assets/sort.svg';
 
 import { orderBookSelector } from '../store/selectors.js';

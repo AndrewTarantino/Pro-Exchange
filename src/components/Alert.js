@@ -1,6 +1,5 @@
 import { useRef, useEffect } from "react";
 import { useSelector } from 'react-redux';
-
 import { myEventsSelector } from '../store/selectors';
 
 import config from '../config.json';

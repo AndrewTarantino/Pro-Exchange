@@ -6,7 +6,6 @@ import arrowDown from '../assets/down-arrow.svg';
 import arrowUp from '../assets/up-arrow.svg'
 
 import { options, defaultSeries } from './PriceChart.config';
-
 import { priceChartSelector } from '../store/selectors';
 
 import Banner from './Banner';

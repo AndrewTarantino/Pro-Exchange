@@ -1,6 +1,7 @@
 import { useRef, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { myOpenOrdersSelector, myFilledOrdersSelector } from '../store/selectors';
+
 import sort from '../assets/sort.svg';
 import { cancelOrder } from '../store/interactions'
 import Banner from './Banner'

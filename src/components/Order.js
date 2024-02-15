@@ -11,7 +11,6 @@ const Order = () => {
   const provider = useSelector(state => state.provider.connection)
   const tokens = useSelector(state => state.tokens.contracts)
   const exchange = useSelector(state => state.exchange.contract)
-
   const dispatch = useDispatch()
 
   const buyRef = useRef(null)

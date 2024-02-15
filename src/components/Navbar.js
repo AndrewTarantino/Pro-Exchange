@@ -5,7 +5,6 @@ import logo from '../assets/logo3.png'
 import eth from '../assets/eth.svg'
 
 import { loadAccount } from '../store/interactions'
-
 import config from '../config.json'
 
 const Navbar = () => {
